@@ -1,4 +1,4 @@
-# nyelvi szerkezetek
+#nyelvi szerkezetek
 #import random
 #from random import randint
 #from random import *

@@ -8,7 +8,7 @@ felhasznalo_kora= int(15.65)
 felhasznalo_kora = int(input("hány éves vagy: "))
 felhasznalo_kora += 19
 felhasznalo_neve = input('Kérem a nevet:')
-felhasznalo_neve = "2"
+felhasznalo_neve = "Erik"
 felhasznalo_neve *= 2
 metszet = felhasznalo_neve[:-5]
 jegyek = [2, 5, 4, 3]
@@ -28,6 +28,8 @@ print('Több soros\n'
 print(f'Szia!, {felhasznalo_neve} ! \n{jegyek}')
 print(f'Kora: {felhasznalo_kora:2f}')
 
-print(felhasznalo_neve.rjust(30))
-print(felhasznalo_neve.ljust(30))
-print(felhasznalo_neve.center(30))
+print(felhasznalo_neve.rjust(30,'.'))
+print(felhasznalo_neve.ljust(30,'.'))
+print(felhasznalo_neve.center(30,'.'))
+print(str(felhasznalo_kora).center(30,'.'))
+
