@@ -1,4 +1,4 @@
-# Ez a második labor feladatát tartalmazza
+# Ez a második labor feladatait tartalmazza
 import harmadik
 
 harmadik.lotto()
