@@ -1,4 +1,4 @@
-#nyelvi szerkezetek
+#nyelvi szerkezet
 #import random
 #from random import randint
 #from random import *
@@ -64,3 +64,8 @@ while i <5:
     print()
 
     lotto()
+
+
+
+
+
