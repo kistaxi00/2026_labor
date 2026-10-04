@@ -1,4 +1,4 @@
-# negyedik alkal
+# negyedik alkalom
 from logging import exception
 
 
