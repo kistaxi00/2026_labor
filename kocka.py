@@ -5,7 +5,7 @@ import random
 def dobas():
     try:
         db= int(dobas_szam.get())
-    except:
+    except ValueError:
         messagebox.showinfo('Hiba', 'Nem sikerült számmá átalakítani')
         return
 
@@ -27,7 +27,7 @@ root.title("Kockázás")
 root.geometry("600x400")
 
 cim_cimke = ttk.Label(root, text='Kockajáték', font='Arial 16 bold')
-cim_cimke.grid(row=0, column=1, padx=10, pady=20)
+cim_cimke.grid(row=0, column=1, padx=10, pady=10)
 
 dobas_szam = tk.StringVar(value="10")
 dobas_szam_be = ttk.Entry(root, textvariable=dobas_szam, width=10)
