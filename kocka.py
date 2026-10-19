@@ -26,11 +26,11 @@ root = tk.Tk()
 root.title("Kockázás")
 root.geometry("600x400")
 
-cim_cimke = ttk.Label(text='Kockajáték', font='Arial 16 bold')
+cim_cimke = ttk.Label(root, text='Kockajáték', font='Arial 16 bold')
 cim_cimke.grid(row=0, column=1, padx=10, pady=20)
 
 dobas_szam = tk.StringVar(value="10")
-dobas_szam_be = ttk.Entry(textvariable=dobas_szam, width=10)
+dobas_szam_be = ttk.Entry(root, textvariable=dobas_szam, width=10)
 dobas_szam_be.grid(row=1, column=0, padx=70, pady=10)
 
 dobas_gomb = ttk.Button(root, text='Dobás', command=dobas)
