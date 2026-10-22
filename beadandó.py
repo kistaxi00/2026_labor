@@ -94,3 +94,5 @@ if __name__ == '__main__':
     ablak.onkey(turtle.bye, "Escape")
 
     turtle.mainloop()
+
+
