@@ -21,6 +21,7 @@ class KockaApp(kocka_class.Kockadobas):
             messagebox.showwarning(title='Dobas', message='Eloszor dobjon')
             return
         fajlnev = 'mentes.csv'
+        print(self.eredmenyek)
         try:
             with open(fajlnev, mode='a', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
