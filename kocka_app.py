@@ -1,6 +1,4 @@
-from fileinput import close
 from json import JSONDecodeError
-from turtledemo.clock import datum
 
 import kocka_class
 import tkinter as tk
@@ -11,7 +9,9 @@ import json
 import sqlite3
 from datetime import datetime
 
-
+class KockaApp:
+    def __init__(self, root):
+        self.root = root
 
 class KockaApp(kocka_class.Kockadobas):
     def __init__(self, root):
