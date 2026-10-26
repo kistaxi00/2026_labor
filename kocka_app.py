@@ -2,6 +2,9 @@ import kocka_class
 import tkinter as tk
 from tkinter import ttk, messagebox
 import csv
+import os
+from datetime import datetime
+
 
 class KockaApp(kocka_class.Kockadobas):
     def __init__(self, root):
@@ -21,11 +24,15 @@ class KockaApp(kocka_class.Kockadobas):
             messagebox.showwarning(title='Dobas', message='Eloszor dobjon')
             return
         fajlnev = 'mentes.csv'
-        print(self.eredmenyek)
+        adatok = self.eredmenyek.copy()
+        adatok['Dátum'] = datetime.now().strftime('%Y.%m.%d')
+        fejlec_kell= not os.path.exists(fajlnev) or os.path.getmtime(fajlnev) == 0
         try:
             with open(fajlnev, mode='a', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
-                writer.writerow(self.eredmenyek.values())
+                if fejlec_kell:
+                    writer.writerow(adatok.keys())
+                writer.writerow(adatok.values())
             messagebox.showinfo(title='Mentes', message='Sikeres volt a Mentes')
         except OSError:
             messagebox.showerror(title='Hiba', message='Nem sikerült a Mentes')
