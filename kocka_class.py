@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 import random
+
 class Kockadobas:
     def __init__(self, root):
         self.root = root
@@ -34,6 +35,7 @@ class Kockadobas:
         if not 1 <= db <= 10000:
             messagebox.showerror('Hiba', 'A dobások számának 1 és 10000 közé kell esnie!')
             return
+
         self.eredmenyek = {i: 0 for i in range(1, 7)}
         for _ in range(db):
             dobott_ertek = random.randint(1, 6)
