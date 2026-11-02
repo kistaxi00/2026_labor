@@ -17,13 +17,13 @@ class Kockadobas:
         self.dobas_szam_be.grid(row=1, column=0, padx=70, pady=10)
 
         self.dobas_gomb = ttk.Button(root, text='Dobás', command=self.dobas)
-        self.dobas_gomb.grid(row=1, column=2, padx=10, pady=10)
+        self.dobas_gomb.grid(row=2, column=1, padx=10, pady=10)
 
         self.kilepes_gomb = ttk.Button(root, text='Kilépés', command=root.destroy)
         self.kilepes_gomb.grid(row=1, column=3, padx=10, pady=10)
 
         self.dobas_eredmenye = ttk.Label(root, text='Eredmény', font='Arial 16 bold')
-        self.dobas_eredmenye.grid(row=2, column=1, padx=10, pady=10)
+        self.dobas_eredmenye.grid(row=2, column=0)
 
     def dobas(self):
         try:
@@ -35,7 +35,7 @@ class Kockadobas:
         if not 1 <= db <= 10000:
             messagebox.showerror('Hiba', 'A dobások számának 1 és 10000 közé kell esnie!')
             return
-
+        self.eredmenyek = {i: 0 for i in range(1, 7)}
         for _ in range(db):
             dobott_ertek = random.randint(1, 6)
             self.eredmenyek[dobott_ertek] += 1
