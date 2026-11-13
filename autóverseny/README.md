@@ -2,7 +2,8 @@ Grafikus Autóverseny
 
 Hallgatói adatok:
 Takács Richárd:
-BHF4ETNeptun-kód:
+Neptun-kód:
+BHF4ET
 
 Feladat leírása:
 A program egy kétszemélyes, grafikus autóverseny szimuláció Python nyelven. A két autó a d és a k gomb nyomására indul el a célvonalig.
