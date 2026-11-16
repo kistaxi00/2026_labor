@@ -23,12 +23,12 @@ def app():
         if jatek_allapot["vege"] == False:
             if a1.xcor() >= 300:
                 jatek_allapot["vege"] = True
-                sajatmodul.kihirdetes_TR(f"A győztes: {a1.nev}!", "yellow")
+                sajatmodul.kihirdetes_TR(f"A győztes: {a1.nev}!", "green")
 
         if jatek_allapot["vege"] == False:
             if a2.xcor() >= 300:
                 jatek_allapot["vege"] = True
-                sajatmodul.kihirdetes_TR(f"A győztes: {a2.nev}!", "yellow")
+                sajatmodul.kihirdetes_TR(f"A győztes: {a2.nev}!", "green")
 
     def a1_lepes_TR():
         if jatek_allapot["vege"] == False:
